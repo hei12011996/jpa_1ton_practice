@@ -17,6 +17,7 @@ public class Company {
     private CompanyProfile profile;
 
     @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "company_id")
     private List<Employee> employees;
 
     public CompanyProfile getProfile() {
